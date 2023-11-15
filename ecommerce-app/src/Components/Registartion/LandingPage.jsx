@@ -2,7 +2,7 @@ import React from 'react'
 import ResponsiveAppBar from '../MUIComponents/HomeBar.tsx'
 import { Grid } from '@mui/material'
 
-const HomePage = () => {
+const LandingPage = () => {
   return (
     <Grid container spacing={0}>
         <Grid item xs={12}>
@@ -15,4 +15,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage
+export default LandingPage

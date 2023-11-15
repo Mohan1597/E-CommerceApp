@@ -138,7 +138,7 @@ function ResponsiveAppBar() {
                 <Button
                     component="label"
                     variant="contained"
-                    style={buttonstylewhite}>
+                    style={buttonstylewhite} onClick={() => navigate('/signup-page')}>
                     
                         SignUp
                   </Button>

@@ -15,10 +15,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Registrationlayout from '../LayOuts/registrationlayout';
 import { Navigate, useNavigate } from 'react-router-dom';
 
-const Login = () => {
-
-  const navigate = useNavigate();
-
+const Signup = () => {
+    const navigate = useNavigate();
   return (
        <Registrationlayout>
           <Box
@@ -34,9 +32,29 @@ const Login = () => {
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
-              Log in {/* to Excisting Account */}
+              Create a New Account
             </Typography>
             <Box component="form" noValidate /* onSubmit={handleSubmit} */ sx={{ mt: 1 }}>
+            <TextField
+                margin="normal"
+                required
+                fullWidth
+                id="email"
+                label="First Name"
+                name="email"
+                autoComplete="email"
+                autoFocus
+              />
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                id="email"
+                label="Last Name"
+                name="email"
+                autoComplete="email"
+                autoFocus
+              />
               <TextField
                 margin="normal"
                 required
@@ -57,35 +75,34 @@ const Login = () => {
                 id="password"
                 autoComplete="current-password"
               />
-              <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                name="password"
+                label="Confirm Password"
+                type="password"
+                id="password"
+                autoComplete="current-password"
               />
+             
               <Button
                 type="submit"
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
               >
-                Sign In
+                Sign Up
               </Button>
-              <Grid container>
-                <Grid item xs>
-                  <Link href="#" variant="body2">
-                    Forgot password?
-                  </Link>
-                </Grid>
                 <Grid item>
-                  <Link href="#" variant="body2" onClick={() => navigate('/signup-page')}>
-                    {"Don't have an account? Sign Up"}
-                  </Link>
-                </Grid>
-              </Grid>
-              {/* <Copyright sx={{ mt: 5 }} /> */}
+                    <Link href="#" variant="body2" onClick={() => navigate('/login-page')}>
+                        {"Already have an account? Sign in"}
+                    </Link>
+                    </Grid>
             </Box>
           </Box>
         </Registrationlayout>
   )
 }
 
-export default Login
+export default Signup
