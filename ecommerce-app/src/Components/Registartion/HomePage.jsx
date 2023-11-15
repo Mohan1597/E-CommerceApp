@@ -8,8 +8,8 @@ const HomePage = () => {
         <Grid item xs={12}>
            <ResponsiveAppBar />
         </Grid>
-        <Grid item xs={12}>
-           <img src='Images\HomePage\home-bg.AVIF' alt='' style={{width: '100%',height: '583px'}}/>
+        <Grid item xs={12} >
+           <img src='Images\HomePage\home-bg.AVIF' alt='' style={{width: '100%'}}/>
         </Grid>
     </Grid>
   )

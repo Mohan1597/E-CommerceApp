@@ -4,6 +4,7 @@ import { yellow } from "@mui/material/colors";
 export const buttonstylewhite = {
     backgroundColor: 'white',
     color: 'black',
+    marginRight: '10px',
 }
 
 export const buttonstyleyellow = {
