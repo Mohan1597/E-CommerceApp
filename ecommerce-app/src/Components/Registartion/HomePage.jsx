@@ -9,9 +9,8 @@ const HomePage = () => {
            <ResponsiveAppBar />
         </Grid>
         <Grid item xs={12}>
-           <img src='Images\HomePage\home-bg.AVIF' alt='' style={{width: '100%'}}/>
+           <img src='Images\HomePage\home-bg.AVIF' alt='' style={{width: '100%',height: '583px'}}/>
         </Grid>
-        
     </Grid>
   )
 }

@@ -12,12 +12,17 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { buttonstylewhite, justifyContent } from './styles';
+import { buttonstyleyellow } from './styles';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
+
+  const navigate = useNavigate();
 
   const pages = ['Products', 'Pricing', 'About'];
   const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -128,13 +133,25 @@ function ResponsiveAppBar() {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-             <Button
-               sx={{color: 'white'}}>
-                  SignUp
-             </Button>
-             <Button sx={{color: 'white'}}>
-                  Login
-             </Button>
+            <div style={justifyContent}>
+              <div>
+                <Button
+                    component="label"
+                    variant="contained"
+                    style={buttonstylewhite}>
+                    
+                        SignUp
+                  </Button>
+              </div>
+              <div>
+                <Button  style={buttonstyleyellow} 
+                 onClick={() => navigate('/login-page')}>
+                        Login
+                  </Button>
+              </div>
+               
+            </div>
+            
           </Box>
         </Toolbar>
       </Container>
