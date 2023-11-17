@@ -18,7 +18,6 @@ import { Navigate, useNavigate } from 'react-router-dom';
 const Signup = () => {
     const navigate = useNavigate();
   return (
-       <Registrationlayout>
           <Box
             sx={{
               my: 8,
@@ -102,7 +101,6 @@ const Signup = () => {
                     </Grid>
             </Box>
           </Box>
-        </Registrationlayout>
   )
 }
 

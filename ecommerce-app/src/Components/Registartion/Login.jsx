@@ -20,7 +20,6 @@ const Login = () => {
   const navigate = useNavigate();
 
   return (
-       <Registrationlayout>
           <Box
             sx={{
               my: 8,
@@ -85,7 +84,6 @@ const Login = () => {
               {/* <Copyright sx={{ mt: 5 }} /> */}
             </Box>
           </Box>
-        </Registrationlayout>
   )
 }
 
