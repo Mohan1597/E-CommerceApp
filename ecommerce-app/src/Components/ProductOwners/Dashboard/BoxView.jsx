@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Grid } from '@mui/material'
 import Box from '@mui/material/Box'
 import { productDetails } from '../SampleData'
 import { BoxStyle , backgroundColorGray} from '../styles'
 
 const BoxView = () => {
+
+  const [productDetails,setProductDetails] = useState(productDetails);
+
   return (
     <Grid container rowSpacing={6} >
         {

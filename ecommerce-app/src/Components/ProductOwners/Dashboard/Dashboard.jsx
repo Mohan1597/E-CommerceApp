@@ -7,11 +7,9 @@ import BoxView from './BoxView'
 
 const PODashboard = () => {
   return (
-    <div style={backgroundColorGray}>
         <div>
            <BoxView /> 
         </div>
-    </div>
   )
 }
 

@@ -1,5 +1,5 @@
 export const BoxStyle = {
-    height: '500px',
+    height: '200px',
     backgroundColor: 'white',
     boxShadow: '0 3px 6px rgba(0, 0, 0, 0.16)',
     borderRadius: '5px',
