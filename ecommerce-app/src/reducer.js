@@ -8,13 +8,16 @@ const InitialStata = {
 function reducer(state = InitialStata ,action){
     switch(action.type){
         case "ProductAdded" : 
-           return [
-             ...state,
-             {
-                id: 1,
-                productName: "Redux Product",
-             }
-           ]
+            return {
+                ...state,
+                productDetails: [
+                    ...state.productDetails,
+                    {
+                        id: 1,
+                        productName: action.payload.productName,
+                    }
+                ]
+            };
         default : 
            return state
     }
