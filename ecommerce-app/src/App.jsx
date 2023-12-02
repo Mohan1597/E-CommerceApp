@@ -8,8 +8,11 @@ import PODashboard from './Components/ProductOwners/Dashboard/Dashboard.jsx';
 import NavBarLayout from './Components/LayOuts/NavBarLayout.jsx';
 import HomePagesLayout from './Components/LayOuts/HomePagesLayout.jsx';
 import ListView from './Components/ProductOwners/ProductsHistory/ListView.jsx';
+import store from './store.js';
 
 function App() {
+  console.log("ji");
+console.log(store.getState());
   return (
     <Router>
       <Fragment>

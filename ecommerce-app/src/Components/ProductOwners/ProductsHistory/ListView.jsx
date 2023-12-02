@@ -3,15 +3,17 @@ import { Grid } from '@mui/material'
 import Box from '@mui/material/Box'
 import { productDetailsjsonData } from '../SampleData'
 import { backgroundColorListView } from '../styles'
+import store from '../../../store'
+import { useSelector } from 'react-redux'
 
 const ListView = () => {
-
-  const [productDetails,setProductDetails] = useState(productDetailsjsonData);
+    
+    const productDetails = useSelector((state) => state.productDetails);
 
   return (
     <Grid container spacing={2} marginTop={2}>
         {
-            productDetails.map((item) => {
+            productDetails?.map((item) => {
                     return (
                         <Grid item xs={12} sx={backgroundColorListView}>
                             {item.productName}
