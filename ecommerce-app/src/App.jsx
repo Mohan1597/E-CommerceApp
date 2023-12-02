@@ -7,6 +7,7 @@ import Signup from './Components/Registartion/Signup.jsx';
 import PODashboard from './Components/ProductOwners/Dashboard/Dashboard.jsx';
 import NavBarLayout from './Components/LayOuts/NavBarLayout.jsx';
 import HomePagesLayout from './Components/LayOuts/HomePagesLayout.jsx';
+import ListView from './Components/ProductOwners/ProductsHistory/ListView.jsx';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
 
           <Route path="/" element={<NavBarLayout />}>
             <Route path="/podashboard" element={<PODashboard />} />
+            <Route path="/product-history" element={<ListView />} />
           </Route>
 
         </Routes>

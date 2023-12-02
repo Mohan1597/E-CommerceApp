@@ -2,20 +2,20 @@ import React, { useState } from 'react'
 import { Grid } from '@mui/material'
 import Box from '@mui/material/Box'
 import { productDetailsjsonData } from '../SampleData'
-import { BoxStyle , backgroundColorGray} from '../styles'
+import { backgroundColorListView } from '../styles'
 
-const BoxView = () => {
+const ListView = () => {
 
   const [productDetails,setProductDetails] = useState(productDetailsjsonData);
 
   return (
-    <Grid container rowSpacing={6} marginTop={2}>
+    <Grid container spacing={2} marginTop={2}>
         {
             productDetails.map((item) => {
                     return (
-                        <Grid item xs ={12} md={3.8} style={BoxStyle}>
-                               {item.productName}
-                         </Grid>
+                        <Grid item xs={12} sx={backgroundColorListView}>
+                            {item.productName}
+                        </Grid>
                     )
             })
         }  
@@ -23,4 +23,4 @@ const BoxView = () => {
   )
 }
 
-export default BoxView
+export default ListView

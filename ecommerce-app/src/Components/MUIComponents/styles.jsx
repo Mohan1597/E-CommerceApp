@@ -12,6 +12,11 @@ export const buttonstyleyellow = {
     color: 'black',
 }
 
+export const buttonstylegray = {
+    backgroundColor: 'gray',
+    color: 'black',
+}
+
 export const justifyContent = {
     display: 'flex',
     justifyContent: 'space-between',

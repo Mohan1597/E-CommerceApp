@@ -27,6 +27,16 @@ export default function NavigationBar({children}) {
         navigate('/');
       }
   }
+
+  const onNavigate = (text) => {
+      if(text === 'Dashboard'){
+        navigate('/podashboard');
+      }
+      else if(text === 'Product History'){
+        navigate('/product-history');
+      }
+  }
+
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
@@ -55,8 +65,8 @@ export default function NavigationBar({children}) {
         <Toolbar />
         <Divider />
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem key={text} disablePadding>
+          {['Dashboard', 'Product History', 'Send email', 'Drafts'].map((text, index) => (
+            <ListItem key={text} onClick={()=>{onNavigate(text)}} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
                   {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}

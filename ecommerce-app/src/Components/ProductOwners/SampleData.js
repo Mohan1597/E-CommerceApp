@@ -1,4 +1,4 @@
-export const productDetails = [
+export const productDetailsjsonData = [
     {
         id: 1,
         productName: "MobileXs",
