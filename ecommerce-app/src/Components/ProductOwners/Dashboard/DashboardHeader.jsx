@@ -10,6 +10,7 @@ import { buttonstylegray } from '../../MUIComponents/styles'
 import { flexdirectionend } from '../styles'
 import AddProductPopup from './PopUps/AddProductPopup'
 import store from '../../../store'
+import { buttonstylewhite } from '../../MUIComponents/styles'
 
 const DashboardHeader = () => {
 
@@ -23,12 +24,13 @@ const DashboardHeader = () => {
     setOpenPopup(false);
   }
 
-  const onSave = (productName) =>{
+  const onSave = (productName,quantity) =>{
     //Dispatching the item
     store.dispatch({
         type : "ProductAdded",
         payload : {
             productName : productName,
+            quantity: quantity
         }
     })
     setOpenPopup(false);
@@ -43,7 +45,7 @@ const DashboardHeader = () => {
              <Button
                 component="label"
                 variant="contained"
-                style={buttonstylegray}
+                style={buttonstylewhite}
                 onClick={onButtonClick}>
                     ADD A PRODUCT 
                 </Button>

@@ -1,11 +1,11 @@
-import { productDetailsjsonData } from "./Components/ProductOwners/SampleData";
+import { productDetailsjsonData } from "../Components/ProductOwners/SampleData";
 
 const InitialStata = {
     productDetails: [...productDetailsjsonData],
     // other state properties...
   };
 
-function reducer(state = InitialStata ,action){
+function productslicereducer(state = InitialStata ,action){
     switch(action.type){
         case "ProductAdded" : 
             return {
@@ -15,6 +15,7 @@ function reducer(state = InitialStata ,action){
                     {
                         id: 1,
                         productName: action.payload.productName,
+                        quantity: action.payload.quantity
                     }
                 ]
             };
@@ -23,4 +24,4 @@ function reducer(state = InitialStata ,action){
     }
 }
 
-export default reducer;
+export default productslicereducer;

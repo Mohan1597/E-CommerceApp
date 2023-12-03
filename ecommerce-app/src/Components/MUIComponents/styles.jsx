@@ -8,12 +8,17 @@ export const buttonstylewhite = {
 }
 
 export const buttonstyleyellow = {
-    backgroundColor: 'yellow',
+    backgroundColor: '#F9C023',
     color: 'black',
 }
 
 export const buttonstylegray = {
     backgroundColor: 'gray',
+    color: 'black',
+}
+
+export const buttonstylered = {
+    backgroundColor: 'red',
     color: 'black',
 }
 

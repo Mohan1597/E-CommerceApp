@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk'; // Import redux-thunk middleware
-import reducer from './reducer';
+import productslicereducer from './Slices/productslice';
 
 const store = configureStore({
-  reducer: reducer,
+  reducer: productslicereducer,
   middleware: [thunk], // Add thunk middleware
   // Other options can be added here
 });

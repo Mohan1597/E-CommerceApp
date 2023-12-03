@@ -25,3 +25,7 @@ export const backgroundColorListView = {
 export const flexdirectionend = {
     justifyContent: "flex-end"
 }
+
+export const center = {
+    justifyContent: "center"
+}

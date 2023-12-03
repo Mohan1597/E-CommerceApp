@@ -10,11 +10,17 @@ import Button from '@mui/material/Button'
 const AddProductPopup = (props) => {
 
   const {open,onCancel,onSave} = props;
+  
 
   const [productName,setProductName] = useState('');
+  const [quantity,setQuantity] = useState('');
 
   const handleChange = (ev) =>{
     setProductName(ev.target.value);
+  }
+
+  const handleChangeqty = (ev) =>{
+    setQuantity(ev.target.value);
   }
 
   return (
@@ -41,7 +47,7 @@ const AddProductPopup = (props) => {
                     id="email"
                     label="Available Quantity"
                     name="qty"
-                    onChange={()=>{}}
+                    onChange={(event)=>{handleChangeqty(event)}}
                     autoFocus
                 />
         </DialogContent>
@@ -55,7 +61,7 @@ const AddProductPopup = (props) => {
              <Button
                 component="label"
                 variant="contained"
-                onClick={() => onSave(productName)}>
+                onClick={() => onSave(productName,quantity)}>
                     SAVE 
                 </Button>
         </DialogActions>
