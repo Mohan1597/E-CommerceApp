@@ -46,7 +46,7 @@ export default function NavigationBar({children}) {
       >
         <Toolbar>
           <Typography variant="h6" noWrap component="div">
-            Permanent drawer
+            DSEll App
           </Typography>
         </Toolbar>
       </AppBar>

@@ -11,10 +11,35 @@ import { center } from '../styles'
 import { flexdirectionend } from '../styles'
 import { buttonstylegray } from '../../MUIComponents/styles'
 import { buttonstyleyellow } from '../../MUIComponents/styles'
+import RemoveProductPopup from './PopUps/RemoveProductPopup'
+
 
 const BoxView = () => {
 
   const productDetails = useSelector((state) => state.productDetails);
+
+  const [openPopup,setOpenPopup] = useState();
+  const [selectedItem,setSelectedItem] = useState();
+
+  const onButtonClick = (item) =>{
+    setSelectedItem(item.id);
+    setOpenPopup(true);
+  }
+
+  const onPopupcancel = () =>{
+    setOpenPopup(false);
+  }
+
+  const onSave = (productid) =>{
+    //Dispatching the item
+    store.dispatch({
+        type : "ProductRemoved",
+        payload : {
+          id : selectedItem,
+        }
+    })
+    setOpenPopup(false);
+  }
 
   debugger
 
@@ -47,7 +72,7 @@ const BoxView = () => {
                                     style={buttonstylegray} 
                                     component="label"
                                     variant="contained"
-                                    onClick={() => {}}>
+                                    onClick={() => onButtonClick(item)}>
                                             Remove
                                     </Button>
                               </Grid>
@@ -75,6 +100,7 @@ const BoxView = () => {
                     )
             })
         }  
+        {openPopup && <RemoveProductPopup open={openPopup} onSave={onSave} onCancel={onPopupcancel} />}
     </Grid>
   )
 }
