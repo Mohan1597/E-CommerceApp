@@ -15,6 +15,10 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import { backgroundColorGray } from '../ProductOwners/styles';
 import { Navigate, useNavigate } from 'react-router-dom';
+import HomeIcon from '@mui/icons-material/Home';
+import HistoryIcon from '@mui/icons-material/History';
+import SettingsIcon from '@mui/icons-material/Settings';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 const drawerWidth = 240;
 
@@ -65,11 +69,11 @@ export default function NavigationBar({children}) {
         <Toolbar />
         <Divider />
         <List>
-          {['Dashboard', 'Product History', 'Send email', 'Drafts'].map((text, index) => (
+          {['Dashboard', 'Product History'].map((text, index) => (
             <ListItem key={text} onClick={()=>{onNavigate(text)}} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {index % 2 === 0 ? <HomeIcon /> : <HistoryIcon />}
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -77,12 +81,12 @@ export default function NavigationBar({children}) {
           ))}
         </List>
         <Divider />
-        <List>
+        <List sx={{bottom: '0px'}}>
           {['Settings','Logout'].map((text, index) => (
          <ListItem key={text} disablePadding>
               <ListItemButton  onClick={() => onButtonClick(text)}>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {index % 2 === 0 ? <SettingsIcon /> : <LogoutIcon />}
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
