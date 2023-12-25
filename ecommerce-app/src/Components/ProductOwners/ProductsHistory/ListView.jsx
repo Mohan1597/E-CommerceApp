@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux'
 
 const ListView = () => {
     
-    const productDetails = useSelector((state) => state.productDetails);
+    const productDetails = useSelector((state) => state.products);
 
   return (
     <Grid container spacing={2} marginTop={2}>

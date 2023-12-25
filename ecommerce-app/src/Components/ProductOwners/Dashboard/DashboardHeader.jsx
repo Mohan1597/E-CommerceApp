@@ -11,10 +11,14 @@ import { flexdirectionend } from '../styles'
 import AddProductPopup from './PopUps/AddProductPopup'
 import store from '../../../store'
 import { buttonstylewhite } from '../../MUIComponents/styles'
+import { useDispatch } from 'react-redux'
+import { addNewProduct } from '../../../Slices/productslice'
 
 const DashboardHeader = () => {
 
   const [openPopup,setOpenPopup] = useState();
+
+  const dispatch = useDispatch();
 
   const onButtonClick = () =>{
     setOpenPopup(true);
@@ -26,13 +30,7 @@ const DashboardHeader = () => {
 
   const onSave = (productName,quantity) =>{
     //Dispatching the item
-    store.dispatch({
-        type : "ProductAdded",
-        payload : {
-            productName : productName,
-            quantity: quantity
-        }
-    })
+    dispatch(addNewProduct({productName : productName,quantity: quantity}))
     setOpenPopup(false);
   }
 

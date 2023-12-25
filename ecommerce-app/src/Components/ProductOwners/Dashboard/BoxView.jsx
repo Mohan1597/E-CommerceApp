@@ -12,11 +12,17 @@ import { flexdirectionend } from '../styles'
 import { buttonstylegray } from '../../MUIComponents/styles'
 import { buttonstyleyellow } from '../../MUIComponents/styles'
 import RemoveProductPopup from './PopUps/RemoveProductPopup'
-
+import { useDispatch } from 'react-redux'
+import { removeProduct } from '../../../Slices/productslice'
 
 const BoxView = () => {
 
-  const productDetails = useSelector((state) => state.productDetails);
+
+  const dispatch = useDispatch();
+
+  const productDetails = useSelector((state) => state.products);
+
+  debugger
 
   const [openPopup,setOpenPopup] = useState();
   const [selectedItem,setSelectedItem] = useState();
@@ -32,12 +38,13 @@ const BoxView = () => {
 
   const onSave = (productid) =>{
     //Dispatching the item
-    store.dispatch({
+    dispatch(removeProduct({id : selectedItem}))
+   /*  dispatch({
         type : "ProductRemoved",
         payload : {
           id : selectedItem,
         }
-    })
+    }) */
     setOpenPopup(false);
   }
 
