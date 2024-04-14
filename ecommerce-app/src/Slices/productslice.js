@@ -1,4 +1,4 @@
-import { productDetailsjsonData } from "../Components/ProductOwners/SampleData";
+import { productDetailsjsonData } from "../Components/product-owners/SampleData";
 import { createSlice } from "@reduxjs/toolkit";
 
 let maxId = 0;

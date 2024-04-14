@@ -4,11 +4,11 @@ import LandingPage from './Components/registartion/LandingPage.jsx';
 import Registrationlayout from './Components/layouts/registrationlayout.jsx';
 import Login from './Components/registartion/Login.jsx';
 import Signup from './Components/registartion/Signup.jsx';
-import PODashboard from './Components/ProductOwners/Dashboard/Dashboard.jsx';
 import NavBarLayout from './Components/layouts/NavBarLayout.jsx';
 import HomePagesLayout from './Components/layouts/HomePagesLayout.jsx';
-import ListView from './Components/ProductOwners/ProductsHistory/ListView.jsx';
+import ListView from './Components/product-owners/products-history/ListView.jsx';
 import store from './store.js';
+import PODashboard from '../src/Components/product-owners/dashboard/Dashboard.jsx'
 
 function App() {
   
