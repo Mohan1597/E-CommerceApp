@@ -1,13 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ECommerceAPI.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ECommerceAPI.Controllers
 {
     public class RegistartionController : Controller
     {
-        [HttpGet("/login")]
-        public string Login()
+        [HttpGet("/helloworld")]
+        public string HelloWorld()
         {
-            return "Hello Worlds";
+            return "Hello World";
         }
+
+        [HttpPost("/adduser")]
+
+        public IActionResult YourAction(LoginModal model)
+        {
+            return Ok(model);
+        }
+
     }
 }
