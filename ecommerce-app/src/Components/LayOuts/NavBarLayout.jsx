@@ -1,5 +1,5 @@
 import React from 'react'
-import NavigationBar from '../MUIComponents/NavigationBar'
+import NavigationBar from '../mui-components/NavigationBar'
 import { Outlet } from 'react-router-dom'
 
 const NavBarLayout = () => {

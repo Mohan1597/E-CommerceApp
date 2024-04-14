@@ -1,5 +1,5 @@
 import React from 'react'
-import ResponsiveAppBar from '../MUIComponents/HomeBar.tsx'
+import ResponsiveAppBar from '../mui-components/HomeBar.tsx'
 import { Grid } from '@mui/material'
 
 const LandingPage = () => {
