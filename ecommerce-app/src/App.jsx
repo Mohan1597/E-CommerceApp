@@ -11,8 +11,7 @@ import ListView from './Components/ProductOwners/ProductsHistory/ListView.jsx';
 import store from './store.js';
 
 function App() {
-  console.log("ji");
-console.log(store.getState());
+  
   return (
     <Router>
       <Fragment>
