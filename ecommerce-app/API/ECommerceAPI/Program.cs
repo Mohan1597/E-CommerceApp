@@ -19,7 +19,7 @@ builder.Services.AddSwaggerGen();
 var configuration = builder.Configuration;
 
 // Get the connection string from appsettings.json
-string connectionString = configuration.GetConnectionString("BookStoreDB");
+string connectionString = configuration.GetConnectionString("ECommerceDB");
 
 // Register DbContext
 builder.Services.AddDbContext<EcommerceStoreContext>(
