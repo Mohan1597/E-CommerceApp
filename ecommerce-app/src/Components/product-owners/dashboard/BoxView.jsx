@@ -13,7 +13,7 @@ import { buttonstylegray } from '../../mui-components/styles'
 import { buttonstyleyellow } from '../../mui-components/styles'
 import RemoveProductPopup from './PopUps/RemoveProductPopup'
 import { useDispatch } from 'react-redux'
-import { removeProduct } from '../../../slices/productslice'
+import { removeProduct } from '../../../Slices/productSlice'
 
 const BoxView = () => {
 

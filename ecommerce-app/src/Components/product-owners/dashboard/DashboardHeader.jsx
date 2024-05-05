@@ -12,7 +12,7 @@ import AddProductPopup from './PopUps/AddProductPopup'
 import store from '../../../store'
 import { buttonstylewhite } from '../../mui-components/styles'
 import { useDispatch } from 'react-redux'
-import { addNewProduct } from '../../../slices/productslice'
+import { addNewProduct } from '../../../Slices/productSlice'
 
 const DashboardHeader = () => {
 

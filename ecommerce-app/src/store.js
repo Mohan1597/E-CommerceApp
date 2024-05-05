@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
-import productslicereducer from './slices/productslice';
+import productslice from './Slices/productSlice';
 import { combineReducers } from '@reduxjs/toolkit';
+import productslicereducer from './Slices/productSlice';
 
 // combineReducers
 const rootReducer = combineReducers({
